@@ -173,6 +173,19 @@ Assignment balancedGroups(std::vector<int> const &birthdays) {
                         i++;
                           }
                     
+                    if(p_b.size() == 0){
+                         int d = copy[class_size-1];
+                         p_b.push_back(std::vector<std::vector<int>>());
+                         p_b[0].push_back(std::vector<int>());
+                         p_b[0][0].push_back(d);
+                    
+                    for(unsigned int i = 0; i < class_size - 1  ; i++)
+                      {
+                          ga.push_back(copy[i]);
+                      }
+                         
+                    return Assignment(diff, p_b[0][0],ga );}
+
             
                   
                       //find G1 and G2 corresponding to the smallest difference of sums
