@@ -122,7 +122,7 @@ Assignment balancedGroups(std::vector<int> const &birthdays) {
                                       p_b[j][4].push_back(abs( p_b[j][2][0] - p_b[j][3][0] ));
                                       
                                       int cc = b + 1 ;
-                                      int how_many = 0;
+                           
                                       int j_save = j ;
                                   
                                   
@@ -135,7 +135,7 @@ Assignment balancedGroups(std::vector<int> const &birthdays) {
                                                   x += 1;
                                                   j = x;
                                                   
-                                                  how_many += 1;
+                                                
                                                   
                                                   p_b.push_back(std::vector<std::vector<int>>());
                                                   p_b[j].push_back(std::vector<int>());
@@ -203,15 +203,6 @@ Assignment balancedGroups(std::vector<int> const &birthdays) {
                       
                        }
                 
-                //delete !!!!
-                //    std::cout << "diff: "<< p_b[min_index][4][0]<<std::endl;
-               //     std::cout <<"gb: ";
-               //     for (int q = 0; q < p_b[min_index][0].size(); q++)
-              //        std::cout << p_b[min_index][0][q] << " ";
-              //       std::cout <<std::endl;
-         //       std::cout <<"sum_b: " <<p_b[min_index][2][0]<<std::endl;
-         //       std::cout <<"sum_a: " <<p_b[min_index][3][0]<<std::endl;
-         //
                         
                         
                         std::vector<int> cb;
@@ -225,14 +216,11 @@ Assignment balancedGroups(std::vector<int> const &birthdays) {
                     it = std::find(copy.begin(), copy.end(), x);
                     if (it != copy.end()) {
                     copy.erase(it);
-                    //break;
+           
                     }
                   }
                 
-                
-               // for (int x : copy) {
-              //      std::cout <<"ga: " << x << " "<<std::endl;;
-              //    }
+       
                 
                       return Assignment(p_b[min_index][4][0],p_b[min_index][0],copy);
                       }
